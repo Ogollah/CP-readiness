@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <hhtml>
+        <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Todo Flask</title>
+        <link href="static/css/style.css" rel="stylesheet"> 
+        </head>
+        <body background="static/img/todo.jpg">
+            <header>
+                <div class="container">
+                    <h2 class="logo">FlaskTodo</h2>
+                    <strong><nav>
+                        <ul class="navmenu">
+                            <li ><a href="{{ url_for('home') }}">Home</a></li>
+                            <li><a href="{{ url_for('todo') }}">Todo</a></li>
+                        </ul>
+                    </nav></strong>
+                </div>
+            </header>
+
+            <div class="container">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </body>
+    </hhtml>
